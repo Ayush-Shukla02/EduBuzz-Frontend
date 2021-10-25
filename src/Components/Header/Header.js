@@ -7,7 +7,12 @@ export default function Header() {
             <nav className="navbar navbar-expand-lg navbar-dark nav2">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
-                        <img src = {logo} height = "200" width = "150" alt = ""/>
+                        <img
+                            src={logo}
+                            height="200"
+                            width="150"
+                            alt="headerimg1"
+                        />
                     </a>
                     <button
                         className="navbar-toggler"

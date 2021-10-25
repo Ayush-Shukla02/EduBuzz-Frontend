@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-export default function App() {
+export default function Tracker() {
     return (
         <section className="py-8">
             <div className="container px-4 mx-auto">
@@ -31,7 +31,7 @@ export default function App() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a href="#">
+                                    <a>
                                         <svg
                                             width="16"
                                             height="16"
@@ -85,7 +85,7 @@ export default function App() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a href="#">
+                                    <a>
                                         <svg
                                             width="16"
                                             height="16"
@@ -139,7 +139,7 @@ export default function App() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a href="#">
+                                    <a>
                                         <svg
                                             width="16"
                                             height="16"
@@ -193,7 +193,7 @@ export default function App() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a href="#">
+                                    <a>
                                         <svg
                                             width="16"
                                             height="16"
@@ -227,18 +227,3 @@ export default function App() {
         </section>
     );
 }
-
-function Card(props) {
-    return (
-        <div classNameName="card">
-            <div classNameName="card__body">
-                <img src={props.img} className="card__image" />
-                <h2 classNameName="card__title">{props.title}</h2>
-                <p classNameName="card__description">{props.description}</p>
-            </div>
-            <button classNameName="card__btn">View Recipe</button>
-        </div>
-    );
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));

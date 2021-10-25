@@ -1,7 +1,7 @@
 import "./Home.css";
 import Image from "../../images/oie_YnkmtSt56Shv.png";
 import flash from "../../images/2152.jpg";
-import others from "../../images/remote-management-distant-work-isometric-icons-composition-with-man-computer-table-with-avatars-distant-workers_1284-63071.jpeg"
+import others from "../../images/remote-management-distant-work-isometric-icons-composition-with-man-computer-table-with-avatars-distant-workers_1284-63071.jpeg";
 export default function Home() {
     return (
         <>
@@ -18,7 +18,7 @@ export default function Home() {
                             </p>
                         </div>
                         <div className={"imgdiv"} id={"homeimg"}>
-                            <img src={Image} className={"bgimg"} alt={""} />
+                            <img src={Image} className={"bgimg"} alt={"img1"} />
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,11 @@ export default function Home() {
                 <div className="relative container px-4 pt-12 md:pt-20 mx-auto">
                     <div className="relative flex flex-wrap -mx-4">
                         <div className={"imgdiv"} id={"homeimg"}>
-                            <img src={flash} className={"bgimg rounded-md"} alt={""} />
+                            <img
+                                src={flash}
+                                className={"bgimg rounded-md"}
+                                alt={"img2"}
+                            />
                         </div>
                         <div className="w-full lg:w-1/2 2xl:w-2/5 px-4 mb-12 mb:mb-0">
                             <h2 className="mb-12 lg:mb-24 text-6xl text-white opacity-90">
@@ -40,11 +44,16 @@ export default function Home() {
                     <div className="relative flex flex-wrap -mx-4">
                         <div className="w-full lg:w-1/2 2xl:w-2/5 px-4 mb-12 mb:mb-0">
                             <h2 className="mb-12 lg:mb-24 text-6xl text-white opacity-90">
-                                Make your tracker and explore what others are doing.
+                                Make your tracker and explore what others are
+                                doing.
                             </h2>
                         </div>
                         <div className={"imgdiv"} id={"homeimg"}>
-                            <img src={others} className={"bgimg rounded-md"} alt={""} />
+                            <img
+                                src={others}
+                                className={"bgimg rounded-md"}
+                                alt={"img3"}
+                            />
                         </div>
                     </div>
                 </div>

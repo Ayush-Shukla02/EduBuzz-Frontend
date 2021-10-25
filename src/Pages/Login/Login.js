@@ -1,33 +1,32 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 import "./Login.css";
 
 export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-	const [email, setEmail] = useState('')
-	const [password, setPassword] = useState('')
+    async function registerUser(event) {
+        event.preventDefault();
 
-	async function registerUser(event) {
-		event.preventDefault()
+        const response = await fetch("http://localhost:4000/api/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                email,
+                password,
+            }),
+        });
 
-		const response = await fetch('http://localhost:4000/api/register', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				email,
-				password,
-			}),
-		})
+        const data = await response.json();
 
-		const data = await response.json()
-
-		if (data.status === 'ok') {
-			// history.push('/login')
-            window.location.href = '/tracker'
-		}
-	}
+        if (data.status === "ok") {
+            // history.push('/login')
+            window.location.href = "/tracker";
+        }
+    }
 
     return (
         <>
@@ -35,12 +34,12 @@ export default function Login() {
                 <img
                     className="hidden lg:block absolute inset-0 mt-32"
                     src="zospace-assets/lines/line-mountain.svg"
-                    alt=""
+                    alt="loginimg1"
                 />
                 <img
                     className="hidden lg:block absolute inset-y-0 right-0 -mr-40 -mt-32"
                     src="zospace-assets/lines/line-right-long.svg"
-                    alt=""
+                    alt="loginimg2"
                 />
                 <div className="relative container px-4 mx-auto">
                     <div className="max-w-5xl mx-auto">
@@ -50,7 +49,6 @@ export default function Login() {
                                     <h2 className="mt-8 mb-12 text-5xl font-bold font-heading text-white">
                                         Start your organised learning journey
                                     </h2>
-
                                 </div>
                             </div>
                             <div className="w-full lg:w-1/2 px-4">
@@ -98,11 +96,14 @@ export default function Login() {
                                                     />
                                                 </svg>
                                             </span>
-                                            <input value={email}
+                                            <input
+                                                value={email}
                                                 className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                                                 type="email"
                                                 placeholder="example@edubuzz.com"
-                                                onChange={(e)=> setEmail(e.target.value)}
+                                                onChange={(e) =>
+                                                    setEmail(e.target.value)
+                                                }
                                             />
                                         </div>
                                         <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
@@ -125,11 +126,14 @@ export default function Login() {
                                                     />
                                                 </svg>
                                             </span>
-                                            <input value={password} 
+                                            <input
+                                                value={password}
                                                 className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none"
                                                 type="password"
                                                 placeholder="Password"
-                                                onChange={(e)=> setPassword(e.target.value)}
+                                                onChange={(e) =>
+                                                    setPassword(e.target.value)
+                                                }
                                             />
                                         </div>
 
