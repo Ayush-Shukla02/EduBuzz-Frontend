@@ -9,16 +9,19 @@ export default function Login() {
     async function registerUser(event) {
         event.preventDefault();
 
-        const response = await fetch("http://localhost:4000/api/register", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                email,
-                password,
-            }),
-        });
+        const response = await fetch(
+            "https://murmuring-refuge-99088.herokuapp.com/api/register",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                }),
+            }
+        );
 
         const data = await response.json();
 
@@ -31,11 +34,6 @@ export default function Login() {
     return (
         <>
             <section className="relative py-20 2xl:py-40  overflow-hidden h-screen pt-5">
-                <img
-                    className="hidden lg:block absolute inset-0 mt-32"
-                    src="zospace-assets/lines/line-mountain.svg"
-                    alt="loginimg1"
-                />
                 <img
                     className="hidden lg:block absolute inset-y-0 right-0 -mr-40 -mt-32"
                     src="zospace-assets/lines/line-right-long.svg"
