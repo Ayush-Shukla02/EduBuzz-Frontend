@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 export default function Tracker() {
     return (
@@ -31,7 +30,7 @@ export default function Tracker() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a>
+                                    <a href="/tracker">
                                         <svg
                                             width="16"
                                             height="16"
@@ -85,7 +84,7 @@ export default function Tracker() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a>
+                                    <a href="/tracker">
                                         <svg
                                             width="16"
                                             height="16"
@@ -139,7 +138,7 @@ export default function Tracker() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a>
+                                    <a href="/tracker">
                                         <svg
                                             width="16"
                                             height="16"
@@ -193,7 +192,7 @@ export default function Tracker() {
                             </div>
                             <div>
                                 <div className="flex items-center justify-between mb-10">
-                                    <a>
+                                    <a href="/tracker">
                                         <svg
                                             width="16"
                                             height="16"
